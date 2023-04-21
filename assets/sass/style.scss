@@ -1,0 +1,331 @@
+/*===== GOOGLE FONTS =====*/
+@import url("https://fonts.googleapis.com/css2?family=Changa:wght@400;500;600;700;800&family=Montserrat:wght@400;500;600;700&family=Vazirmatn:wght@800&family=Work+Sans:wght@600&display=swap");
+/*===== VARIABLES CSS =====*/
+:root {
+  /*===== Colores =====*/
+  --first-color: #eca527;
+  --second-color: #3373a3;
+  --body-bg: #000007;
+  /*===== Fuente y tipografia =====*/
+  --body-font: "Montserrat", sans-serif;
+  --big-font-size: 2rem;
+  --h2-font-size: 1.25rem;
+  --normal-font-size: 0.938rem;
+  --smaller-font-size: 0.75rem;
+  --z-back: -10;
+  --z-fixed: 100;
+}
+
+@media screen and (min-width: 968px) {
+  :root {
+    --big-font-size: 3.5rem;
+    --h2-font-size: 2rem;
+    --normal-font-size: 1rem;
+    --smaller-font-size: 0.875rem;
+  }
+}
+
+/*===== BASE =====*/
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  color: #fff;
+  background-color: var(--body-bg);
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/*===== CLASS CSS ===== */
+a.buy-btn {
+  padding: 16px 32px;
+  font-family: "Work Sans", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 140%;
+  color: #ffffff;
+  background: #eca527;
+  text-transform: capitalize;
+  display: block;
+  width: max-content;
+}
+
+header {
+  width: 100%;
+  padding-block: 10px;
+  position: absolute;
+  top: 0;
+  a.nav-logo {
+    font-family: "Vazirmatn";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 38px;
+    text-align: center;
+    color: #ffffff;
+  }
+}
+
+#hero {
+  // min-height: 100vh;
+  width: 100%;
+  background-color: var(--body-bg);
+  background: url(../images/bg-overlay.png) center center no-repeat;
+  background-size: cover;
+  padding-block: 100px;
+
+  h1.title {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 52px;
+    line-height: 120%;
+    color: #ffffff;
+
+    @media (max-width: 700px) {
+      font-size: 40px;
+      line-height: 120%;
+    }
+  }
+  p.info {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: #ffffff;
+  }
+  a.buy-btn:last-child {
+    background-color: #3373a3;
+  }
+}
+
+main {
+  width: 100%;
+
+  #about {
+    width: 100%;
+    background-color: var(--body-bg);
+    background: url(../images/bg-overlay.png) bottom left no-repeat;
+    background-size: cover;
+    padding-block: 50px;
+
+    @media (max-width: 1100px) {
+      .tweet-div {
+        order: 2;
+      }
+    }
+
+    @media (max-width: 700px) {
+      img {
+        margin-inline: auto;
+      }
+    }
+
+    h2.title {
+      font-family: "Montserrat", sans-serif;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 140%;
+      color: #eca527;
+    }
+    p.info {
+      font-family: "Montserrat", sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 32px;
+      color: #ffffff;
+    }
+  }
+
+  #features {
+    width: 100%;
+    padding-block: 50px;
+    background-color: var(--body-bg);
+    background: url(../images/bg-overlay.png) center top no-repeat;
+    background-size: cover;
+
+    h1.title {
+      font-family: "Montserrat", sans-serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 40px;
+      line-height: 140%;
+      color: #eca527;
+
+      @media (max-width: 700px) {
+        font-size: 32px;
+        line-height: 140%;
+      }
+    }
+
+    .row {
+      div {
+        @media (min-width: 110px) {
+          width: 372px;
+          margin-inline: auto;
+        }
+        // height: 394px;
+        background: #0e0e0e;
+        border-radius: 12px;
+        h2.head {
+          font-family: "Montserrat", sans-serif;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 32px;
+          line-height: 140%;
+          color: #f0f0f0;
+        }
+        p {
+          font-family: "Montserrat", sans-serif;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 32px;
+          color: #ffffff;
+        }
+      }
+    }
+  }
+
+  #roadmap {
+    width: 100%;
+    padding-block: 50px;
+    background-color: var(--body-bg);
+    background: url(../images/bg-overlay.png) top right no-repeat;
+    background-size: cover;
+
+    h1.title {
+      font-family: "Montserrat", sans-serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 40px;
+      line-height: 140%;
+      color: #eca527;
+
+      @media (max-width: 700px) {
+        font-size: 32px;
+        line-height: 140%;
+      }
+    }
+    .row {
+      div.cd {
+        // height: 198px;
+        background: #161616;
+        border-radius: 20px;
+        padding: 24px 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+
+        div {
+          width: 82px;
+          height: 82px;
+          background: linear-gradient(180deg, #eca527 0%, #3681b9 112.25%);
+          border-radius: 20px;
+          p {
+            font-family: "Montserrat", sans-serif;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 120%;
+            color: #161616;
+          }
+          h2 {
+            font-family: "Montserrat", sans-serif;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 40px;
+            color: #161616;
+            text-transform: uppercase;
+          }
+        }
+        ul {
+          li {
+            font-family: "Montserrat", sans-serif;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 20px;
+            color: #ffffff;
+
+            &::marker {
+              width: 12px;
+              height: 12px;
+              left: 0px;
+              top: 5px;
+              background: #ffffff;
+              border-radius: 1000px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+footer {
+  padding-block: 50px;
+
+  a.nav-logo {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    text-align: center;
+    color: #ffffff;
+  }
+  @media (max-width: 700px) {
+    .container {
+      justify-content: center !important;
+    }
+  }
+  ul {
+    li {
+      a {
+        font-family: "Montserrat", sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        color: #ffffff;
+      }
+    }
+  }
+}
